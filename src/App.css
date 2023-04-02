@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../node_modules/vazirmatn/Vazirmatn-font-face.css";
+html {
+  scroll-behavior: smooth;
+}
+li:hover > div {
+  display: flex;
+}
+.active > ul {
+  display: block;
+}
+
+.swiper-slide {
+  width: auto !important ;
+}
+/* .Swiper2 .swiper-button-prev{
+background: #000;
+} */
