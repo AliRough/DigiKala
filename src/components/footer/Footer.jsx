@@ -80,37 +80,37 @@ export default function Footer() {
             <li className="text-gray-700 text-lg my-3 font-bold">
               با دیجی کالا
             </li>
-            <li className="text-gray-500 text-lg my-3">اتاق خبر دیجی‌کالا</li>
-            <li className="text-gray-500 text-lg my-3">فروش در دیجی‌کالا</li>
-            <li className="text-gray-500 text-lg my-3">فرصت‌های شغلی</li>
-            <li className="text-gray-500 text-lg my-3">
+            <li className="text-gray-500 text-md my-3">اتاق خبر دیجی‌کالا</li>
+            <li className="text-gray-500 text-md my-3">فروش در دیجی‌کالا</li>
+            <li className="text-gray-500 text-md my-3">فرصت‌های شغلی</li>
+            <li className="text-gray-500 text-md my-3">
               گزارش تخلف در دیجی‌کالا
             </li>
-            <li className="text-gray-500 text-lg my-3">تماس با دیجی‌کالا</li>
-            <li className="text-gray-500 text-lg my-3">درباره دیجی‌کالا</li>
+            <li className="text-gray-500 text-md my-3">تماس با دیجی‌کالا</li>
+            <li className="text-gray-500 text-md my-3">درباره دیجی‌کالا</li>
           </ul>
           <ul>
             <li className="text-gray-700 text-lg my-3 font-bold">
               خدمات مشتریان
             </li>
-            <li className="text-gray-500 text-lg my-3">
+            <li className="text-gray-500 text-md my-3">
               پاسخ به پرسش‌های متداول
             </li>
-            <li className="text-gray-500 text-lg my-3">
+            <li className="text-gray-500 text-md my-3">
               رویه‌های بازگرداندن کالا
             </li>
-            <li className="text-gray-500 text-lg my-3">شرایط استفاده</li>
-            <li className="text-gray-500 text-lg my-3">حریم خصوصی</li>
-            <li className="text-gray-500 text-lg my-3">گزارش باگ</li>
+            <li className="text-gray-500 text-md my-3">شرایط استفاده</li>
+            <li className="text-gray-500 text-md my-3">حریم خصوصی</li>
+            <li className="text-gray-500 text-md my-3">گزارش باگ</li>
           </ul>
 
           <ul className="hidden md:list-item">
             <li className="text-gray-700 text-lg my-3 font-bold">
               راهنمای خرید از دیجی کالا
             </li>
-            <li className="text-gray-500 text-lg my-3">نحوه ثبت سفارش </li>
-            <li className="text-gray-500 text-lg my-3">رویه ارسال سفارش</li>
-            <li className="text-gray-500 text-lg my-3">شیوه‌های پرداخت</li>
+            <li className="text-gray-500 text-md my-3">نحوه ثبت سفارش </li>
+            <li className="text-gray-500 text-md my-3">رویه ارسال سفارش</li>
+            <li className="text-gray-500 text-md my-3">شیوه‌های پرداخت</li>
           </ul>
         
         <ul className="block md:list-item ">

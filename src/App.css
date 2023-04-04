@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "../node_modules/vazirmatn/Vazirmatn-font-face.css";
+@import "./assets/fonts/vazirmatn/Vazirmatn-font-face.css";
 html {
   scroll-behavior: smooth;
 }
