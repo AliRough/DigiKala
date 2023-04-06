@@ -10,8 +10,17 @@ import dasteBandi from "../../Datas/dasteBandi";
 import DigiSuggestions from "./inMain/DigiSuggestion";
 import digiSuggestions from "../../Datas/DigiSuggestions";
 import brands from "../../Datas/berands";
+import bazdid from "../../Datas/bazdid";
+import { FcPrevious } from "react-icons/fc";
+import { useMediaQuery } from "react-responsive";
 export default function Main() {
   const [sliderData, setSliderData] = useState(slider2);
+  const isSm = useMediaQuery({
+    query: "(min-width: 640px )",
+  });
+  const isMd = useMediaQuery({
+    query: "(min-width: 768px )",
+  });
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -19,90 +28,24 @@ export default function Main() {
   return (
     <>
       <Slider>
-        <a href="#">
-          <img
-            className="w-[99vw] relative md:h-96  "
-            src="./src/assets/images/placeholder.webp"
-            alt=""
-          />
-          <span className="absolute  overflow-hidden top-0  h-full ">
+        <div class="  h-max   ">
+          <a href="#" class="flex items-center   sm:h-72 md:h-64 lg:h-80  xl:h-96 h-64 overflow-hidden  ">
             <img
-              className=" md:h-auto max-w-none md:w-full h-full "
-              src="./src/assets/images/upslider/myBaby.jpg"
+              className=" object-cover w-full max-w-none  h-full  "
+              src={`./src/assets/images/upslider/${isMd?"lavazem":"lavazemSM"}.webp`}
               alt=""
             />
-          </span>
-        </a>
-        <a href="#">
-          <img
-            className="w-[99vw] relative md:h-96   "
-            src="./src/assets/images/placeholder.webp"
-            alt=""
-          />
-          <span className="absolute  overflow-hidden top-0  h-full   ">
+          </a>
+        </div>
+        <div class="  h-max   ">
+          <a href="#" class="flex items-center md:h-64 lg:h-80  xl:h-96   sm:h-72 h-64 overflow-hidden ">
             <img
-              className=" md:h-auto max-w-none md:w-full h-full "
-              src="./src/assets/images/upslider/zelot.jpg"
+              className=" object-cover w-full  max-w-none  h-full "
+              src={`./src/assets/images/upslider/${isMd?"clear":"clearSM"}.webp`}
               alt=""
             />
-          </span>
-        </a>
-        <a href="#">
-          <img
-            className="w-[99vw] relative md:h-96  "
-            src="./src/assets/images/placeholder.webp"
-            alt=""
-          />
-          <span className="absolute  overflow-hidden top-0  h-full ">
-            <img
-              className=" md:h-auto max-w-none md:w-full h-full "
-              src="./src/assets/images/upslider/myBaby.jpg"
-              alt=""
-            />
-          </span>
-        </a>
-        <a href="#">
-          <img
-            className="w-[99vw] relative md:h-96   "
-            src="./src/assets/images/placeholder.webp"
-            alt=""
-          />
-          <span className="absolute  overflow-hidden top-0  h-full   ">
-            <img
-              className=" md:h-auto max-w-none md:w-full h-full "
-              src="./src/assets/images/upslider/zelot.jpg"
-              alt=""
-            />
-          </span>
-        </a>
-        <a href="#">
-          <img
-            className="w-[99vw] relative md:h-96  "
-            src="./src/assets/images/placeholder.webp"
-            alt=""
-          />
-          <span className="absolute  overflow-hidden top-0  h-full ">
-            <img
-              className=" md:h-auto max-w-none md:w-full h-full "
-              src="./src/assets/images/upslider/myBaby.jpg"
-              alt=""
-            />
-          </span>
-        </a>
-        <a href="#">
-          <img
-            className="w-[99vw] relative md:h-96   "
-            src="./src/assets/images/placeholder.webp"
-            alt=""
-          />
-          <span className="absolute  overflow-hidden top-0  h-full   ">
-            <img
-              className=" md:h-auto max-w-none md:w-full h-full "
-              src="./src/assets/images/upslider/zelot.jpg"
-              alt=""
-            />
-          </span>
-        </a>
+          </a>
+        </div>
       </Slider>
       <UserSelection />
       <Slider2>
@@ -148,7 +91,11 @@ export default function Main() {
               <img src={slide.src} className="m-0 flex" />
               <div>
                 <div className="flex justify-between items-center">
-                  <Off sale={slide.sale} price={slide.price} className="text-xs" />
+                  <Off
+                    sale={slide.sale}
+                    price={slide.price}
+                    className="text-xs flex items-center py-1"
+                  />
                   <span className="flex mx-2">
                     <span>{numberWithCommas(slide.sale)}</span>
                     <div className="text-sm">تومان</div>
@@ -252,16 +199,20 @@ export default function Main() {
           ))}
         </div>
       </DigiSuggestions>
-      <div className="border rounded-lg mx-8">
+      <div className="border rounded-lg mx-6 md:mx-8">
         <p className="text-center md:text-3xl text-2xl my-8">
           {" "}
           محبوب ترین برند ها
         </p>
         <DigiSuggestions className="border-0  ">
-          <div className="flex items-center w-max py-4   justify-between ">
+          <div className="flex items-center  w-max py-4   justify-between ">
             {brands.map((logo, index) => (
-              <div key={index} className=" w-32 h-max p-3 border-l ">
-                <a href="#" className="block  w-full h-full  ">
+              <div key={index} className="  md:w-32 w-20 h-max p-3 border-l ">
+                {/* <p className="">سلام من کاملم</p> */}
+                <a
+                  href="#"
+                  className="flex items-center md:h-28  w-full h-64  "
+                >
                   <img
                     src={logo.img}
                     alt="alt"
@@ -272,6 +223,41 @@ export default function Main() {
             ))}
           </div>
         </DigiSuggestions>
+      </div>
+      <div className="flex flex-col md:flex-row  justify-between border rounded-2xl md:m-8 m-6 overflow-hidden">
+        {bazdid.map((item, index) => {
+          return (
+            <div key={index} className="border-b md:border-l w-auto p-3">
+              <dv>
+                <p className="font-bold text-lg">{item.title}</p>
+                <p className="font-light text-gray-700 text-sm my-2">
+                  {" "}
+                  براساس بازدید شما
+                </p>
+              </dv>
+              <div className="flex  flex-wrap w-full ">
+                <img
+                  className="w-1/2 p-2 border-l border-b"
+                  src={item.img1}
+                  alt=""
+                />
+                <img className="w-1/2 p-2 border-b " src={item.img2} alt="" />
+                <img className="w-1/2 p-2 border-l" src={item.img3} alt="" />
+                <img className="w-1/2 p-2  " src={item.img4} alt="" />
+              </div>
+              <div>
+                <a
+                  href="#"
+                  className="text-cyan-600 flex items-center my-2  justify-center "
+                >
+                  {" "}
+                  <p>مشاهده</p>
+                  <FcPrevious className="md:mx-1 text-cyan-600 text-sm " />{" "}
+                </a>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );

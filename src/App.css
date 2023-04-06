@@ -1,7 +1,7 @@
+@import '/node_modules/vazirmatn/Vazirmatn-font-face.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./assets/fonts/vazirmatn/Vazirmatn-font-face.css";
 html {
   scroll-behavior: smooth;
 }
@@ -12,9 +12,9 @@ li:hover > div {
   display: block;
 }
 
-.swiper-slide {
+/* .swiper-slide {
   width: auto !important ;
-}
+} */
 /* .Swiper2 .swiper-button-prev{
 background: #000;
 } */

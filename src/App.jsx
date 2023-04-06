@@ -6,7 +6,7 @@ import Footer from "./components/footer/Footer"
 export default function App() {
   return (
     <>
-      <Header className="z-50 " />
+      <Header className="z-50 font-Vazirmatn " />
       <Main />
       <Footer/>
     </>

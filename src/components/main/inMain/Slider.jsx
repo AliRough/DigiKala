@@ -5,21 +5,22 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import NextButton from "./components/NextButton";
 import PervButton from "./components/PervButton";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
+
 export default function Slider(props) {
   return (
     <Swiper
-    
+      slidesPerView={1}
       spaceBetween={30}
-      // centeredSlides={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+      centeredSlides={true}
+    //   autoplay={{
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //   }}
       pagination={{
-        clickable: true,
+        dynamicBullets: true,
       }}
       modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper relative"
+      className="mySwiper   "
     >
       {props.children.map((child, index) => (
         <SwiperSlide key={index}>{child}</SwiperSlide>
