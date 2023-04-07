@@ -28,20 +28,30 @@ export default function Main() {
   return (
     <>
       <Slider>
-        <div class="  h-max   ">
-          <a href="#" class="flex items-center   sm:h-72 md:h-64 lg:h-80  xl:h-96 h-64 overflow-hidden  ">
+        <div className="  h-max   ">
+          <a
+            href="#"
+            className="flex items-center   sm:h-72 md:h-64 lg:h-80  xl:h-96 h-64 overflow-hidden  "
+          >
             <img
               className=" object-cover w-full max-w-none  h-full  "
-              src={`./src/assets/images/upslider/${isMd?"lavazem":"lavazemSM"}.webp`}
+              src={`./src/assets/images/upslider/${
+                isMd ? "lavazem" : "lavazemSM"
+              }.webp`}
               alt=""
             />
           </a>
         </div>
-        <div class="  h-max   ">
-          <a href="#" class="flex items-center md:h-64 lg:h-80  xl:h-96   sm:h-72 h-64 overflow-hidden ">
+        <div className="  h-max   ">
+          <a
+            href="#"
+            className="flex items-center md:h-64 lg:h-80  xl:h-96   sm:h-72 h-64 overflow-hidden "
+          >
             <img
               className=" object-cover w-full  max-w-none  h-full "
-              src={`./src/assets/images/upslider/${isMd?"clear":"clearSM"}.webp`}
+              src={`./src/assets/images/upslider/${
+                isMd ? "clear" : "clearSM"
+              }.webp`}
               alt=""
             />
           </a>
@@ -49,7 +59,7 @@ export default function Main() {
       </Slider>
       <UserSelection />
       <Slider2>
-        <SwiperSlide>
+        <SwiperSlide className="w-auto h-full">
           <div className=" w-40 mx-1 h-48 p-1  text-center">
             <img
               src="./src/assets/images/slider2/Amazings.svg"
@@ -85,31 +95,57 @@ export default function Main() {
             </a>
           </div>
         </SwiperSlide>
-        {sliderData.map((slide) => (
-          <SwiperSlide key={slide.id} className="rounded-t-md overflow-hidden">
-            <div className="bg-white text-center w-40 mx-1 rounded-md overflow-hidden cursor-pointer">
-              <img src={slide.src} className="m-0 flex" />
+        {
+          <SwiperSlide key={sliderData[0].id} className="w-auto h-full    ">
+            <div className="bg-white text-center w-40 ml-0.5 rounded-tr-md rounded-br-md overflow-hidden cursor-pointer">
+              <img src={sliderData[0].src} className="m-0 flex" />
               <div>
                 <div className="flex justify-between items-center">
                   <Off
-                    sale={slide.sale}
-                    price={slide.price}
+                    sale={sliderData[0].sale}
+                    price={sliderData[0].price}
                     className="text-xs flex items-center py-1"
                   />
                   <span className="flex mx-2">
-                    <span>{numberWithCommas(slide.sale)}</span>
+                    <span>{numberWithCommas(sliderData[0].sale)}</span>
                     <div className="text-sm">تومان</div>
                   </span>
                 </div>
                 <p className="text-gray-400  line-through">
-                  {numberWithCommas(slide.price)}
+                  {numberWithCommas(sliderData[0].price)}
                 </p>
               </div>
             </div>
           </SwiperSlide>
-        ))}
-        <SwiperSlide>
-          <div className="flex flex-col bg-white w-40 mx-1 h-[13.3rem] p-1  text-center justify-center rounded-md">
+        }
+        {sliderData.map(
+          (slide, index) =>
+            index !== 0 && (
+              <SwiperSlide key={slide.id} className="w-auto h-full  ">
+                <div className="bg-white text-center w-40 ml-0.5   cursor-pointer">
+                  <img src={slide.src} className="m-0 flex" />
+                  <div>
+                    <div className="flex justify-between items-center">
+                      <Off
+                        sale={slide.sale}
+                        price={slide.price}
+                        className="text-xs flex items-center py-1"
+                      />
+                      <span className="flex mx-2">
+                        <span>{numberWithCommas(slide.sale)}</span>
+                        <div className="text-sm">تومان</div>
+                      </span>
+                    </div>
+                    <p className="text-gray-400  line-through">
+                      {numberWithCommas(slide.price)}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            )
+        )}
+        <SwiperSlide className="w-auto h-full">
+          <div className="flex flex-col bg-white w-40  h-[13rem] p-1  text-center justify-center rounded-l-md">
             <span className=" mx-auto border border-blue-400 text-blue-400 rounded-full w-2/6">
               <svg
                 stroke="currentColor"
@@ -228,13 +264,13 @@ export default function Main() {
         {bazdid.map((item, index) => {
           return (
             <div key={index} className="border-b md:border-l w-auto p-3">
-              <dv>
+              <div>
                 <p className="font-bold text-lg">{item.title}</p>
                 <p className="font-light text-gray-700 text-sm my-2">
                   {" "}
                   براساس بازدید شما
                 </p>
-              </dv>
+              </div>
               <div className="flex  flex-wrap w-full ">
                 <img
                   className="w-1/2 p-2 border-l border-b"
