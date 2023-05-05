@@ -1,0 +1,136 @@
+{
+  "serving": [
+    {
+      "title": "سرویس 26 پارچه آیروپال مدل آبرا",
+      "rate": "4.3",
+      "price": "1400000",
+      "off": "990000",
+      "isInDigi": "true",
+      "number": "13",
+      "src": "./src/assets/images/serve/26pr.webp",
+      "id": "1",
+      "daste": "1"
+    },
+    {
+      "title": "سرویس غذاخوری 26 پارچه دینو مدل گرد ساده لب طلایی",
+      "rate": "4.1",
+      "price": "1600000",
+      "off": "1600000",
+      "isInDigi": "false",
+      "number": "2",
+      "src": "./src/assets/images/serve/26pr2.webp",
+      "id": "2",
+      "daste": "2"
+    },
+    {
+      "title": "سبد پیک نیک 58 پارچه نوزینو",
+      "rate": "3.3",
+      "price": "490000",
+      "off": "490000",
+      "isInDigi": "true",
+      "number": "9",
+      "src": "./src/assets/images/serve/58pr.webp",
+      "id": "3",
+      "daste": "3"
+    },
+    {
+      "title": "سرویس غذا خوری 102 پارچه دینو مدل گرد ساده لب طلایی",
+      "rate": "2.3",
+      "price": "5909000",
+      "off": "5909000",
+      "isInDigi": "true",
+      "number": "1",
+      "src": "./src/assets/images/serve/102pr.webp",
+      "id": "4",
+      "daste": "4"
+    },
+    {
+      "title": "سرویس قاشق جنگال 33 پارچه جی فی نی",
+      "rate": "5",
+      "price": "300000",
+      "off": "274000",
+      "isInDigi": "false",
+      "number": "1",
+      "src": "./src/assets/images/serve/chagho.webp",
+      "id": "5",
+      "daste": "5"
+    },
+    {
+      "title": "سرویس قاشق چنگال 12 پارچه صنایع استیل",
+      "rate": "4.8",
+      "price": "2850000",
+      "off": "1590000",
+      "isInDigi": "true",
+      "number": "9",
+      "src": "./src/assets/images/serve/changal.webp",
+      "id": "6",
+      "daste": "6"
+    },
+    {
+      "title": "فنجان نوری تازه مدل markiz بسته 6 عددی",
+      "rate": "3.9",
+      "price": "179000",
+      "off": "179000",
+      "isInDigi": "false",
+      "number": "6",
+      "src": "./src/assets/images/serve/livan.webp",
+      "id": "7",
+      "daste": "7"
+    },
+    {
+      "title": "لیوان نوری تازه ochal بسته 6 عددی",
+      "rate": "3.7",
+      "price": "180000",
+      "off": "180000",
+      "isInDigi": "false",
+      "number": "7",
+      "src": "./src/assets/images/serve/livan2.webp",
+      "id": "8",
+      "daste": "8"
+    },
+    {
+      "title": "لیوان نوری تازه سری رایزر بسته 6 عددی",
+      "rate": "4.9",
+      "price": "180000",
+      "off": "180000",
+      "isInDigi": "false",
+      "number": "14",
+      "src": "./src/assets/images/serve/livan3.webp",
+      "id": "9",
+      "daste": "9"
+    },
+    {
+      "title": "ماگ حرارتی طرح پاپیون",
+      "rate": "4.7",
+      "price": "400000",
+      "off": "249000",
+      "isInDigi": "true",
+      "number": "9",
+      "src": "./src/assets/images/serve/mag.webp",
+      "id": "10",
+      "daste": "10"
+    },
+    {
+      "title": "پیاله تریتی",
+      "rate": "4.3",
+      "price": "93000",
+      "off": "93000",
+      "isInDigi": "false",
+      "number": "19",
+      "src": "./src/assets/images/serve/piale.webp",
+      "id": "11",
+      "daste": "11"
+    },
+    {
+      "title": "استند پذیرایی مدل باران",
+      "rate": "3.6",
+      "price": "99000",
+      "off": "99000",
+      "isInDigi": "false",
+      "number": "3",
+      "src": "./src/assets/images/serve/stand.webp",
+      "id": "12",
+      "daste": "12"
+    }
+  ]
+}

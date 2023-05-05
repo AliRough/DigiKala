@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Amazing from "./inMain/Amazing";
 import Slider from "./inMain/Slider";
 import Slider2 from "./inMain/Slider2";
@@ -13,6 +13,10 @@ import brands from "../../Datas/berands";
 import bazdid from "../../Datas/bazdid";
 import { FcPrevious } from "react-icons/fc";
 import { useMediaQuery } from "react-responsive";
+import { FreeMode } from "swiper";
+import { Link } from "react-router-dom";
+import { addNumbersCam } from "../../../Helper/helper";
+
 export default function Main() {
   const [sliderData, setSliderData] = useState(slider2);
   const isSm = useMediaQuery({
@@ -21,16 +25,13 @@ export default function Main() {
   const isMd = useMediaQuery({
     query: "(min-width: 768px )",
   });
-  const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
+  
   return (
     <>
       <Slider>
         <div className="  h-max   ">
-          <a
-            href="#"
+          <Link
+            to="/product-List"
             className="flex items-center   sm:h-72 md:h-64 lg:h-80  xl:h-96 h-64 overflow-hidden  "
           >
             <img
@@ -40,11 +41,11 @@ export default function Main() {
               }.webp`}
               alt=""
             />
-          </a>
+          </Link>
         </div>
         <div className="  h-max   ">
-          <a
-            href="#"
+          <Link
+            to="/product-List"
             className="flex items-center md:h-64 lg:h-80  xl:h-96   sm:h-72 h-64 overflow-hidden "
           >
             <img
@@ -54,11 +55,11 @@ export default function Main() {
               }.webp`}
               alt=""
             />
-          </a>
+          </Link>
         </div>
       </Slider>
       <UserSelection />
-      <Slider2>
+      <Slider2 className=" bg-red-600 mx-4 rounded-2xl p-2 py-4 ">
         <SwiperSlide className="w-auto h-full">
           <div className=" w-40 mx-1 h-48 p-1  text-center">
             <img
@@ -107,12 +108,12 @@ export default function Main() {
                     className="text-xs flex items-center py-1"
                   />
                   <span className="flex mx-2">
-                    <span>{numberWithCommas(sliderData[0].sale)}</span>
+                    <span>{addNumbersCam(sliderData[0].sale)}</span>
                     <div className="text-sm">تومان</div>
                   </span>
                 </div>
                 <p className="text-gray-400  line-through">
-                  {numberWithCommas(sliderData[0].price)}
+                  {addNumbersCam(sliderData[0].price)}
                 </p>
               </div>
             </div>
@@ -132,12 +133,12 @@ export default function Main() {
                         className="text-xs flex items-center py-1"
                       />
                       <span className="flex mx-2">
-                        <span>{numberWithCommas(slide.sale)}</span>
+                        <span>{addNumbersCam(slide.sale)}</span>
                         <div className="text-sm">تومان</div>
                       </span>
                     </div>
                     <p className="text-gray-400  line-through">
-                      {numberWithCommas(slide.price)}
+                      {addNumbersCam(slide.price)}
                     </p>
                   </div>
                 </div>
@@ -215,21 +216,29 @@ export default function Main() {
         {" "}
         پیشنهاد های دیجی کالا
       </p>
-      <DigiSuggestions className="lg:overflow-hidden">
-        <div className="flex w-max lg:w-full  justify-between ">
+      <DigiSuggestions className="md:overflow-hidden ">
+        <div className="flex md:w-full w-min justify between  ">
           {digiSuggestions.map((sug, index) => (
-            <div key={index} className=" w-40 p-3 border-l ">
-              <a href="#" className="border-3 w-full border-black">
-                <img src={sug.img1} alt={sug.title1} className="   w-full" />{" "}
-                <p className="text-center text-xs">{sug.title1}</p>
+            <div key={index} className="  md:w-[14.5%] w-32 border-l ">
+              <a href="#" className=" md:h-1/2 block  w-full    border-black ">
+                <div className="h-full py-4  border-b">
+                  <img src={sug.img1} alt={sug.title1} className="w-full   " />{" "}
+                  <p className="text-center text-xs truncate px-3 ">
+                    {sug.title1}
+                  </p>
+                </div>
               </a>
-              <a href="#" className=" mt-3 w-full  ">
-                <img
-                  src={sug.img2}
-                  alt={sug.title2}
-                  className="mt-4 pt-2    border-t w-full"
-                />{" "}
-                <p className="text-center text-xs">{sug.title2}</p>
+              <a href="#" className="  w-full  md:h-1/2 block   ">
+                <div className="h-full py-4 ">
+                  <img
+                    src={sug.img2}
+                    alt={sug.title2}
+                    className="w-full     "
+                  />{" "}
+                  <p className="text-center text-xs truncate p-3">
+                    {sug.title2}
+                  </p>
+                </div>
               </a>
             </div>
           ))}
@@ -240,25 +249,22 @@ export default function Main() {
           {" "}
           محبوب ترین برند ها
         </p>
-        <DigiSuggestions className="border-0  ">
-          <div className="flex items-center  w-max py-4   justify-between ">
-            {brands.map((logo, index) => (
-              <div key={index} className="  md:w-32 w-20 h-max p-3 border-l ">
-                {/* <p className="">سلام من کاملم</p> */}
-                <a
-                  href="#"
-                  className="flex items-center md:h-28  w-full h-64  "
-                >
-                  <img
-                    src={logo.img}
-                    alt="alt"
-                    className=" object-fill  w-full"
-                  />{" "}
-                </a>
-              </div>
-            ))}
-          </div>
-        </DigiSuggestions>
+        <Slider2 className=" ">
+          {brands.map((logo, index) => (
+            <SwiperSlide
+              key={index}
+              className="  md:w-32 w-20 h-max p-3 border-l "
+            >
+              <a href="#" className="flex items-center md:h-28  w-full h-64  ">
+                <img
+                  src={logo.img}
+                  alt="alt"
+                  className=" object-fill  w-full"
+                />{" "}
+              </a>
+            </SwiperSlide>
+          ))}
+        </Slider2>
       </div>
       <div className="flex flex-col md:flex-row  justify-between border rounded-2xl md:m-8 m-6 overflow-hidden">
         {bazdid.map((item, index) => {

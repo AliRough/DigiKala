@@ -65,21 +65,7 @@ export default function Slider2(props) {
         spaceBetween={0}
         freeMode={true}
         modules={[FreeMode]}
-        // // breakpoints={{
-        // //   0: {
-        // //     slidesPerView: 2,
-        // //   },
-        // //   640: {
-        // //     slidesPerView: 4,
-        // //   },
-        // //   768: {
-        // //     slidesPerView: 'auto',
-        // //   },
-        // //   1024: {
-        // //     slidesPerView:'auto',
-        // //   },
-        // // }}
-        className=" mySwiper bg-red-600 mx-4 rounded-2xl p-2 py-4 "
+        className={` mySwiper ${props.className}`}
       >
         {props.children}
         <NextButton className="absolute z-10 top-[45%] right-5 md:block hidden bg-white mx-1 p-2 rounded-full shadow-lg  border border-gray-400">

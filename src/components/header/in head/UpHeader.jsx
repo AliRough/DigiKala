@@ -1,6 +1,7 @@
 import React, { Children } from "react";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import { BsQuestionSquare } from "react-icons/bs";
+import SearchBox from "./SearchBox";
 
 export default function UpHeader(props) {
   return (
@@ -32,14 +33,12 @@ export default function UpHeader(props) {
           </a>
         </div>
         <BsQuestionSquare className="mx-4 text-2xl md:hidden " />
+        {/* Search box */}
         <div className="w-2/4 hidden md:block ">
-          
-          {/* Search box */}
-          {props.children}
+          <SearchBox placeholder="نام کالا ، برند و  یا دسته مورد نظر خود را جستجو کنید ..." />
         </div>
 
         <div className="hidden md:flex  lg:order-2  justify-end">
-          
           {/* social box */}
           <a
             href="#"
